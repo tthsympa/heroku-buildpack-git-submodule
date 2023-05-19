@@ -52,8 +52,11 @@ echo "-----> Installed SSH key from GIT_SSH_KEY"
 git fetch -q --depth 1 origin -a > /dev/null
 git checkout -q ${SOURCE_VERSION:-main} > /dev/null
 echo "-----> Fetched shallow history from $GIT_REPO_URL"
+echo "$SOURCE_VERSION"
 
 # initialize all the submodules
 git submodule -q update --init --recursive
 echo "-----> Checked out all submodules"
 git submodule status | sed 's/^/       * /'
+
+ls -l
