@@ -60,3 +60,4 @@ echo "-----> Checked out all submodules"
 git submodule status | sed 's/^/       * /'
 
 ls -l
+ls -R cms
