@@ -24,7 +24,7 @@ cd "$APP_DIR"
 # rm .gitmodules
 
 # create an empty repo to fetch into
-# git init -q
+git init -q
 
 # enable sparse checkouts, this will avoid checking out
 # all the files in the repo, we'll only check out .gitmodules
@@ -49,7 +49,7 @@ echo "   LogLevel ERROR" >> ~/.ssh/config
 echo "-----> Installed SSH key from GIT_SSH_KEY"
 
 # checkout the revision that's being deployed
-# git fetch -q --depth 1 origin -a > /dev/null
+git fetch -q --depth 1 origin -a > /dev/null
 # git checkout -q ${SOURCE_VERSION:-main} > /dev/null
 echo "-----> Fetched shallow history from $GIT_REPO_URL"
 echo "$SOURCE_VERSION"
